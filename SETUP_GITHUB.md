@@ -13,7 +13,7 @@
 
 3. **Подключите удаленный репозиторий**:
    ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/troll-mini-app.git
+   git remote add origin https://github.com/vebster88/troll
    ```
 
 4. **Отправьте код**:

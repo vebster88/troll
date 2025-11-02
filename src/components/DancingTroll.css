@@ -1,0 +1,181 @@
+/* src/components/DancingTroll.css */
+.dancing-troll-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  height: 200px;
+}
+
+.troll {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  animation: dance 1s ease-in-out infinite;
+}
+
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+.troll-head {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: headBounce 0.5s ease-in-out infinite;
+}
+
+@keyframes headBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.troll-eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  top: 25px;
+  animation: blink 3s infinite;
+}
+
+.troll-eye.left {
+  left: 20px;
+}
+
+.troll-eye.right {
+  right: 20px;
+}
+
+.troll-eye::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+.troll-mouth {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  border: 3px solid #654321;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: smile 1.5s ease-in-out infinite;
+}
+
+@keyframes smile {
+  0%, 100% { 
+    width: 20px;
+    height: 15px;
+  }
+  50% { 
+    width: 25px;
+    height: 18px;
+  }
+}
+
+.troll-body {
+  width: 70px;
+  height: 80px;
+  background: linear-gradient(135deg, #654321 0%, #8B4513 100%);
+  border-radius: 30px 30px 15px 15px;
+  margin: -10px auto 0;
+  position: relative;
+  animation: bodySway 1s ease-in-out infinite;
+}
+
+@keyframes bodySway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.troll-arm {
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+  border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  transform-origin: top center;
+}
+
+.troll-arm.left {
+  left: -15px;
+  animation: armWaveLeft 1s ease-in-out infinite;
+}
+
+.troll-arm.right {
+  right: -15px;
+  animation: armWaveRight 1s ease-in-out infinite;
+}
+
+@keyframes armWaveLeft {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+}
+
+@keyframes armWaveRight {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+.troll-leg {
+  width: 12px;
+  height: 60px;
+  background: linear-gradient(135deg, #654321 0%, #8B4513 100%);
+  border-radius: 6px;
+  position: absolute;
+  bottom: -60px;
+  transform-origin: top center;
+}
+
+.troll-leg.left {
+  left: 20px;
+  animation: legKickLeft 1s ease-in-out infinite;
+}
+
+.troll-leg.right {
+  right: 20px;
+  animation: legKickRight 1s ease-in-out infinite;
+}
+
+@keyframes legKickLeft {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes legKickRight {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+}

@@ -1,13 +1,133 @@
 /* src/components/DancingTroll.css */
 .dancing-troll-container {
   display: flex !important;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  height: 200px;
   width: 100%;
-  min-height: 200px;
+  min-height: 250px;
   position: relative;
+}
+
+.dancing-troll-container:has(.troll-gifs-grid) {
+  min-height: 400px;
+}
+
+.troll-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.switch-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  user-select: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .switch-label {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.3);
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .toggle-slider {
+  background-color: rgba(76, 175, 80, 0.6);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-switch:hover .toggle-slider {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+.toggle-switch:hover input:checked + .toggle-slider {
+  background-color: rgba(76, 175, 80, 0.8);
+}
+
+.troll-gifs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+
+.troll-gif-wrapper {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+}
+
+.troll-gif-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.troll-gif {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  object-fit: cover;
+}
+
+.troll-gif-wrapper.jump {
+  animation: jumpAnimation 0.6s ease-out;
 }
 
 .troll {

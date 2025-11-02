@@ -5,11 +5,13 @@
     "signature": ""
   },
   "frame": {
-    "name": "Troll Mini App",
-    "version": "1",
-    "iconUrl": "https://placehold.co/512x512.png?text=T",
+    "name": "Dancing Troll",
+    "version": "1.0.0",
+    "iconUrl": "https://troll-farcaster.vercel.app/images/icon.png",
     "homeUrl": "https://troll-farcaster.vercel.app",
-    "splashImageUrl": "https://placehold.co/600x400.png?text=Troll+App",
-    "splashBackgroundColor": "#000000"
+    "splashImageUrl": "https://troll-farcaster.vercel.app/images/splash.png",
+    "splashBackgroundColor": "#181818",
+    "imageUrl": "https://troll-farcaster.vercel.app/images/og-image.png",
+    "buttonTitle": "Dance with Troll 🎉"
   }
 }

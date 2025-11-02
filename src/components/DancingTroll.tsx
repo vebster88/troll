@@ -60,7 +60,12 @@ export function DancingTroll() {
       
       {useGif ? (
         <div className="troll-gifs-grid">
-          {[0, 1, 2, 3].map((index) => (
+          {[
+            'green_troll.gif',
+            'green_troll2.gif',
+            'green_troll3.gif',
+            'green_troll4.gif'
+          ].map((gifFile, index) => (
             <div
               key={index}
               className={`troll-gif-wrapper ${isJumping === index ? 'jump' : ''}`}
@@ -68,7 +73,7 @@ export function DancingTroll() {
               style={jumpStyles[index] || {}}
             >
               <img 
-                src="/images/green_troll.gif" 
+                src={`/images/${gifFile}`}
                 alt={`Dancing Green Troll ${index + 1}`} 
                 className="troll-gif"
               />

@@ -92,9 +92,10 @@ input:checked + .toggle-slider:before {
 .troll-gifs-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 0;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   margin: 0 auto;
   aspect-ratio: 1;
 }
@@ -121,9 +122,9 @@ input:checked + .toggle-slider:before {
   width: 100%;
   height: 100%;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
   object-fit: cover;
+  object-position: center;
 }
 
 .troll-gif-wrapper.jump {

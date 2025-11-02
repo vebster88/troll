@@ -19,3 +19,90 @@
     color: #181818;
   }
 }
+
+/* Help Tooltip Styles */
+.help-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  .help-icon {
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.help-tooltip:hover .help-icon {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+@media (prefers-color-scheme: light) {
+  .help-tooltip:hover .help-icon {
+    background-color: rgba(128, 128, 128, 0.3);
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  margin-bottom: 5px;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.help-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: light) {
+  .tooltip-text {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+  }
+  
+  .tooltip-text::after {
+    border-top-color: rgba(0, 0, 0, 0.85);
+  }
+}

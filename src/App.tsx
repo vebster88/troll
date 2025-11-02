@@ -23,7 +23,11 @@ function App() {
       minHeight: "100vh",
       justifyContent: "center"
     }}>
-      <h1 style={{ marginBottom: "20px" }}>🔄 Dancing Troll</h1>
+      <h1 style={{ marginBottom: "10px" }}>🔄 Dancing Troll</h1>
+      <div className="help-tooltip" style={{ marginBottom: "20px" }}>
+        <span className="help-icon">?</span>
+        <span className="tooltip-text">Click on the troll and it will do a trick for you</span>
+      </div>
       <DancingTroll />
     </div>
   );

@@ -1,0 +1,15 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "name": "Troll Mini App",
+    "version": "0.0.1",
+    "iconUrl": "https://placehold.co/512x512.png?text=T",
+    "homeUrl": "https://your-domain.com",
+    "splashImageUrl": "https://placehold.co/600x400.png?text=Troll+App",
+    "splashBackgroundColor": "#000000"
+  }
+}

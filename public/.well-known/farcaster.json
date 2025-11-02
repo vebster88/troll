@@ -1,12 +1,12 @@
 {
   "accountAssociation": {
-    "header": "",
-    "payload": "",
-    "signature": ""
+    "header": "eyJmaWQiOjQ4NzQxNiwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEQ5NkM4OTAxMDVkOUNFNEY5MTMwZGY0NEJiZjU4NTAzRmFEODI4M0EifQ",
+    "payload": "eyJkb21haW4iOiJ0cm9sbC1mYXJjYXN0ZXIudmVyY2VsLmFwcCJ9",
+    "signature": "KeqPmfqUTxx34w1cWI/rjmK8BagmHFewxTR33vD+XMdV2ebIzYnRmDW9yn+5J9n7NRzYmQYhb1wlVGwytVQwnBs="
   },
   "frame": {
     "name": "Dancing Troll",
-    "version": "1.0.0",
+    "version": "1",
     "iconUrl": "https://troll-farcaster.vercel.app/images/icon.png",
     "homeUrl": "https://troll-farcaster.vercel.app",
     "splashImageUrl": "https://troll-farcaster.vercel.app/images/splash.png",

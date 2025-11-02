@@ -1,0 +1,9 @@
+node_modules
+dist
+.cache
+*.log
+.env.local
+.DS_Store
+troll
+package-lock.json
+

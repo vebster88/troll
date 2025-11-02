@@ -23,7 +23,7 @@ function App() {
       minHeight: "100vh",
       justifyContent: "center"
     }}>
-      <h1 style={{ marginBottom: "20px" }}>🔄 Troll Mini App</h1>
+      <h1 style={{ marginBottom: "20px" }}>🔄 Dancing Troll</h1>
       <DancingTroll />
     </div>
   );

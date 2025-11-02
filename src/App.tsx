@@ -12,8 +12,18 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
-      <h1>🔄 Troll Mini App</h1>
+    <div style={{ 
+      padding: "20px", 
+      maxWidth: "600px", 
+      margin: "0 auto",
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      minHeight: "100vh",
+      justifyContent: "center"
+    }}>
+      <h1 style={{ marginBottom: "20px" }}>🔄 Troll Mini App</h1>
       <DancingTroll />
     </div>
   );

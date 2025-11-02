@@ -6,7 +6,7 @@
   },
   "frame": {
     "name": "Troll Mini App",
-    "version": "0.0.1",
+    "version": "1",
     "iconUrl": "https://placehold.co/512x512.png?text=T",
     "homeUrl": "https://troll-farcaster.vercel.app",
     "splashImageUrl": "https://placehold.co/600x400.png?text=Troll+App",

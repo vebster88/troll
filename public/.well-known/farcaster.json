@@ -8,7 +8,7 @@
     "name": "Troll Mini App",
     "version": "0.0.1",
     "iconUrl": "https://placehold.co/512x512.png?text=T",
-    "homeUrl": "https://your-domain.com",
+    "homeUrl": "https://troll-farcaster.vercel.app",
     "splashImageUrl": "https://placehold.co/600x400.png?text=Troll+App",
     "splashBackgroundColor": "#000000"
   }
